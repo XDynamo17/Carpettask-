@@ -1,0 +1,23 @@
+using System;
+
+public class Carpet
+{
+    public static void Main(string[] args)
+    {
+        int smallPrice = 25;
+        int largePrice = 35;
+        float taxRate = 0.06f; 
+        Console.Write("Enter number of small carpets: ");
+        int numberS = int.Parse(Console.ReadLine());
+        Console.Write("Enter number of large carpets: ");
+        int numberL = int.Parse(Console.ReadLine());
+        int costS = smallPrice * numberS;
+        int costL = largePrice * numberL;
+        int costTot = costL + costS;
+        float tax = costTot * taxRate;
+        float total = costTot + tax;
+        Console.WriteLine($"Total cost is: {costTot}");
+        Console.WriteLine($"Estimated tax is: {tax}");
+        Console.WriteLine($"Total is: {total}");
+    }
+}
